@@ -1,0 +1,17 @@
+INFO: COMMAND: /home/mesent/data/atmt_2025/train.py --cuda --data /home/mesent/data/atmt_2025/cz-en/data/prepared --src-tokenizer /home/mesent/data/atmt_2025/cz-en/tokenizers/cz-bpe-8000.model --tgt-tokenizer /home/mesent/data/atmt_2025/cz-en/tokenizers/en-bpe-8000.model --restore-file /home/mesent/data/atmt_2025/cz-en/checkpoints/checkpoint_last.pt --save-dir /home/mesent/data/atmt_2025/cz-en/checkpoints --max-epoch 10 --save-interval 1 --epoch-checkpoints --log-file /home/mesent/data/atmt_2025/cz-en/logs/resume_train.log --source-lang cz --target-lang en --dim-embedding 256 --attention-heads 4 --dim-feedforward-encoder 1024 --dim-feedforward-decoder 1024 --n-encoder-layers 3 --n-decoder-layers 3 --max-seq-len 300
+INFO: Arguments: {'cuda': True, 'data': '/home/mesent/data/atmt_2025/cz-en/data/prepared', 'source_lang': 'cz', 'target_lang': 'en', 'src_tokenizer': '/home/mesent/data/atmt_2025/cz-en/tokenizers/cz-bpe-8000.model', 'tgt_tokenizer': '/home/mesent/data/atmt_2025/cz-en/tokenizers/en-bpe-8000.model', 'max_tokens': None, 'batch_size': 1, 'train_on_tiny': False, 'arch': 'transformer', 'max_epoch': 10, 'clip_norm': 4.0, 'lr': 0.0003, 'patience': 3, 'max_length': 300, 'log_file': '/home/mesent/data/atmt_2025/cz-en/logs/resume_train.log', 'save_dir': '/home/mesent/data/atmt_2025/cz-en/checkpoints', 'restore_file': '/home/mesent/data/atmt_2025/cz-en/checkpoints/checkpoint_last.pt', 'save_interval': 1, 'no_save': False, 'epoch_checkpoints': True, 'ignore_checkpoints': False, 'encoder_dropout': 0.0, 'decoder_dropout': 0.0, 'dim_embedding': 256, 'attention_heads': 4, 'dim_feedforward_encoder': 1024, 'dim_feedforward_decoder': 1024, 'max_seq_len': 300, 'n_encoder_layers': 3, 'n_decoder_layers': 3, 'encoder_embed_path': None, 'decoder_embed_path': None, 'seed': 490665056}
+INFO: Built a model with 11831872 parameters
+INFO: Loaded checkpoint /home/mesent/data/atmt_2025/cz-en/checkpoints/checkpoint_last.pt
+INFO: Epoch 007: loss 1.417 | lr 0.0003 | num_tokens 18.43 | batch_size 1 | grad_norm 106.9 | clip 0.946
+INFO: Time to complete epoch 007 (training only): 124.81 seconds
+INFO: Epoch 007: valid_loss 1.67 | num_tokens 18 | batch_size 5e+03 | valid_perplexity 5.33 | BLEU 25.854
+INFO: Epoch 008: loss 0.8648 | lr 0.0003 | num_tokens 18.43 | batch_size 1 | grad_norm 93.48 | clip 0.8794
+INFO: Time to complete epoch 008 (training only): 132.46 seconds
+INFO: Epoch 008: valid_loss 1.84 | num_tokens 18 | batch_size 5e+03 | valid_perplexity 6.31 | BLEU 23.746
+INFO: Epoch 009: loss 0.5137 | lr 0.0003 | num_tokens 18.43 | batch_size 1 | grad_norm 85.49 | clip 0.8084
+INFO: Time to complete epoch 009 (training only): 137.95 seconds
+INFO: Epoch 009: valid_loss 2.1 | num_tokens 18 | batch_size 5e+03 | valid_perplexity 8.19 | BLEU 21.972
+INFO: Loading the best model for final evaluation on the test set
+INFO: Loaded checkpoint /home/mesent/data/atmt_2025/cz-en/checkpoints/checkpoint_last.pt
+INFO: Test set results: BLEU 19.718
+INFO: Final Test Set Results: BLEU 19.72
