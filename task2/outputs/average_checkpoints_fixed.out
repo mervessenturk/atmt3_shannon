@@ -1,0 +1,28 @@
+
+Filesystems usage for user mesent ( uid 646341728 ):
+-------------------------------------------------------------------------------------
+Directory                       Used   Limit   Used,%         Files     Limit
+-------------------------------------------------------------------------------------
+/home/mesent                   486MB    15GB     3.2%          4185    100000
+/data/mesent                    23GB   200GB    11.2%         82513          
+/scratch/mesent                   0B    20TB     0.0%             2          
+
+/shares/atomt.pilot.s3it.uzh    22GB    10TB     0.2%          1608          
+-------------------------------------------------------------------------------------
+
+Files on /scratch may be purged after 30 days.
+See https://docs.s3it.uzh.ch/cluster/data
+
+=== Averaging checkpoints on compute node ===
+/home/mesent/data/atmt_2025/average_checkpoints_fixed.py:20: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state = torch.load(os.path.join(ckpt_dir, f), map_location="cpu")
+
+🔄 Averaging 3 checkpoints from: /home/mesent/data/atmt_2025/cz-en/checkpoints
+  - checkpoint7_5.328.pt
+  - checkpoint8_6.310.pt
+  - checkpoint9_8.190.pt
+
+✅ Saved averaged model with args to:
+/home/mesent/data/atmt_2025/cz-en/checkpoints/checkpoint_averaged_fixed_args.pt
+
+=== Done ===
